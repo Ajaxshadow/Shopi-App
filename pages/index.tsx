@@ -150,7 +150,7 @@ export default function Home() {
           <div className="text relative pl-5 flex flex-col items-start gap-5">
             <div className="borderSide80 h-4/5 w-[2px] bg-white absolute left-0 bottom-0"></div>
             <h1 className=' font-semibold text-lg'>Do Not Miss The Clothes In <br /> Different Styles</h1>
-            <p className=' capitalize'>See Attractive Men's And Women's clothes suitable for this season of the year in our most up-to-date and largest collection</p>
+            <p className=' capitalize'>See Attractive Men{"'"}s And Women{"'"}s clothes suitable for this season of the year in our most up-to-date and largest collection</p>
             <button className='text-shopiBlack bg-white font-semibold p-4 py-2 flex items-center'>Discover More<BsArrowRightShort className='text-xl'/></button>
           </div>
           <div className="images mt-10 flex gap-5">
