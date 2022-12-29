@@ -43,15 +43,17 @@ export default function Home() {
             <div className="line w-[1.5rem] h-[.3rem] bg-black"></div>
           </div>
         </nav>
-        <header className='m-4 border-l-[3px] border-black p-4'>
+        <header className='relative m-4 border-l-[3px] border-shopiBlack p-4'>
           <h1 className=' font-semibold text-2xl'>
           Different style and fashion <br /> for everyone
           </h1>
-          <button className='bg-black text-white py-3 px-5 text-lg mt-8 mb-20 flex items-center gap-2'>Shop Collection <BsArrowRightShort className='text-3xl'/></button>
+          <button className='bg-shopiBlack text-white py-3 px-5 text-lg mt-8 mb-20 flex items-center gap-2'>Shop Collection <BsArrowRightShort className='text-3xl'/></button>
+          <Image src={headerLady} className="md:absolute md:right-0 md:top-0 md:w-1/2 md:h-full hidden md:mt-10" alt=""/>
+
         </header>
-        <section className='m-4 -mt-20 h-[35vmax] relative'>
-          <Image src={headerLady} className="ml-auto w-1/2 h-full object-cover" alt=""/>
-          <div className="flex gap-3 w-fit pr-12 card absolute bottom-5  p-3 bg-white translate-x-8">
+        <section className='m-4 ml-5 -mt-20 h-[35vmax] relative'>
+          <Image src={headerLady} className="ml-auto w-1/2 h-full object-cover md:opacity-0" alt=""/>
+          <div className="flex gap-3 w-fit pr-12 card absolute bottom-5  p-3 bg-white translate-x-8 shadow-xl">
             <Image className='w-[4rem] aspect-square object-cover' src={glasses} alt=''/>
             <div className="text flex flex-col justify-between">
               <h1 className=' font-semibold'>Glasses</h1>
@@ -65,7 +67,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="flex gap-3 w-fit pr-12 card absolute bottom-5 -translate-y-[125%] p-3 bg-white">
+          <div className="flex gap-3 w-fit pr-12 card absolute bottom-5 -translate-y-[125%] p-3 bg-white shadow-xl">
             <Image className='w-[4rem] aspect-square object-cover' src={glasses} alt=''/>
             <div className="text flex flex-col justify-between">
               <h1 className=' font-semibold'>Glasses</h1>
@@ -90,7 +92,7 @@ export default function Home() {
             <p>International Brands</p>
           </div>
         </section>
-        <section className='bg-black px-10 py-5 text-white flex flex-col'>
+        <section className=' bg-shopiBlack px-10 py-5 text-white flex flex-col'>
           <div className="desc text-center flex flex-col items-center my-4">
             <div className="logo text-4xl w-fit"><TbWorld/></div>
             <div className="text">
@@ -113,8 +115,8 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="summerColl p-5 bg-white">
-          <header className='flex justify-between'>
+        <section className="summerColl bg-white mb-5">
+          <header className='p-5 pb-0 flex justify-between my-5'>
             <h1 className='font-bold'>The Summer Collection</h1>
             <div className="collectionPicker flex gap-2 text-black/50 font-bold">
               <div onClick={(e)=>{clickVal = 1; console.log(e.target)}} className={`01 cursor-pointer ${clickVal===1?"font-bold text-lg text-black":""} `}>01</div>
@@ -123,6 +125,100 @@ export default function Home() {
               <div onClick={(e)=>{clickVal = 4; console.log(e.target)}} className={`04 cursor-pointer ${clickVal===4?"font-bold text-lg text-black":""} `}>04</div>
             </div>
           </header>
+          <div className="slider my-10 flex  overflow-scroll">
+            <div className="scCard px-2 w-fit">
+              <div className="image bg-shopiBlack/10 w-60 h-60 grid place-content-center">
+                <button className='text-white bg-shopiBlack p-4 flex items-center'>Quick View <BsArrowRightShort className='text-xl'/></button>
+              </div>
+              <div className="text py-3">
+                <p className='font-bold'>Teffta Blouse</p> 
+                <p>$80.00</p>
+              </div>
+            </div>
+            <div className="scCard px-2 w-fit">
+              <div className="image bg-shopiBlack/10 w-60 h-60 grid place-content-center">
+                <button className='text-white bg-shopiBlack p-4 flex items-center'>Quick View <BsArrowRightShort className='text-xl'/></button>
+              </div>
+              <div className="text py-3">
+                <p className='font-bold'>Teffta Blouse</p> 
+                <p>$80.00</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div className="dontMiss px-4 py-7 bg-shopiBlack text-white">
+          <div className="text relative pl-5 flex flex-col items-start gap-5">
+            <div className="borderSide80 h-4/5 w-[2px] bg-white absolute left-0 bottom-0"></div>
+            <h1 className=' font-semibold text-lg'>Do Not Miss The Clothes In <br /> Different Styles</h1>
+            <p className=' capitalize'>See Attractive Men's And Women's clothes suitable for this season of the year in our most up-to-date and largest collection</p>
+            <button className='text-shopiBlack bg-white font-semibold p-4 py-2 flex items-center'>Discover More<BsArrowRightShort className='text-xl'/></button>
+          </div>
+          <div className="images mt-10 flex gap-5">
+            <div className="forWomen bg-white/20 w-1/2 h-60 relative"><button className='absolute bottom-2 left-2 flex items-center gap-2 p-3 py-2 bg-shopiBlack text-white'>For Women <BsArrowRightShort className='text-2xl'/></button></div>
+            <div className="forMen bg-white/20 w-1/2 h-60 relative"><button className='absolute bottom-2 left-2 flex items-center gap-2 p-3 py-2 bg-shopiBlack text-white'>For Men <BsArrowRightShort className='text-2xl'/></button></div>
+          </div>
+        </div>
+        <section className="summerColl bg-white mb-5">
+          <header className='p-5 pb-0 flex justify-between my-5'>
+            <h1 className='font-bold'>On Sale Products</h1>
+            <p className='flex items-center'>View More<BsArrowRightShort className='text-xl'/></p>
+          </header>
+          <div className="slider my-10 flex  overflow-scroll">
+            <div className="scCard px-2 w-fit">
+              <div className="image bg-shopiBlack/40 w-60 h-60 relative">
+                <div className="off bg-shopiBlack text-white p-3 absolute right-0 font-semibold">%15</div>
+              </div>
+              <div className="text py-3">
+                <p className='font-bold'>Violet Frill Collar Shirt</p> 
+                <div className="price w-2/3 flex justify-between">
+                  <p>$80.00</p>
+                  <p className='line-through opacity-70'>$180.00</p>
+                </div>
+              </div>
+            </div>
+            <div className="scCard px-2 w-fit">
+              <div className="image bg-shopiBlack/40 w-60 h-60 relative">
+                <div className="off bg-shopiBlack text-white p-3 absolute right-0 font-semibold">%15</div>
+              </div>
+              <div className="text py-3">
+                <p className='font-bold'>Violet Frill Collar Shirt</p> 
+                <div className="price w-2/3 flex justify-between">
+                  <p>$80.00</p>
+                  <p className='line-through opacity-70'>$180.00</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="summerColl bg-white mb-5">
+          <header className='p-5 pb-0 flex justify-between my-5'>
+            <h1 className='font-bold'>Product Of The Week</h1>
+            <p className='flex items-center'>View More<BsArrowRightShort className='text-xl'/></p>
+          </header>
+          <div className="pofCont mx-5 bg-shopiBlack text-white flex">
+            <div className="image w-[40%] h-fill bg-white/40"></div>
+            <div className="text w-[60%] flex flex-col gap-2 p-5">
+              <h1 className='font-semibold'>Cotton Black T-Shirt</h1>
+              <p className=' text-sm'>Super light and comfortable cotton t-shirt without causing sensitivity to thee body</p>
+              <div className="price my-2 flex justify-between items-center">
+                <p>$125.98</p>
+                <div className="stars flex">
+                  <AiFillStar/>
+                  <AiFillStar/>
+                  <AiFillStar/>
+                  <AiFillStar/>
+                  <AiFillStar/>
+                </div>
+              </div>
+              <button className='bg-white text-shopiBlack flex items-center self-end p-4 py-2 text-sm font-semibold gap-2'>Buy Now <BsArrowRightShort className='text-xl'/></button>
+            </div>
+          </div>
+        </section>
+        <section className="summerColl bg-white mb-5">
+          <header className='p-5 pb-0 flex justify-between my-5'>
+            <h1 className='font-bold'>Our Happy Customers</h1>
+            <p className='flex items-center'>View More<BsArrowRightShort className='text-xl'/></p>
+          </header>         
         </section>
       </main>
     </>
