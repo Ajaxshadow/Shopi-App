@@ -84,12 +84,12 @@ export default function Home() {
         </section>
         <section className='p-4 mb-4 flex social-proof'>
           <div className="hc w-1/2">
-            <h1 className=' font-bold'>2K+</h1>
-            <p>Happy Customer</p>
+            <h1 className=' font-bold text-xl'>2K+</h1>
+            <p className='font-semibold'>Happy Customer</p>
           </div>
           <div className="ib w-1/2">
-            <h1 className=' font-bold'>30+</h1>
-            <p>International Brands</p>
+            <h1 className=' font-bold text-xl'>30+</h1>
+            <p className='font-semibold'>International Brands</p>
           </div>
         </section>
         <section className=' bg-shopiBlack px-10 py-5 text-white flex flex-col'>
@@ -115,7 +115,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="summerColl bg-white mb-5">
+        <section className="SC bg-white mb-5">
           <header className='p-5 pb-0 flex justify-between my-5'>
             <h1 className='font-bold'>The Summer Collection</h1>
             <div className="collectionPicker flex gap-2 text-black/50 font-bold">
@@ -146,7 +146,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <div className="dontMiss px-4 py-7 bg-shopiBlack text-white">
+        <section className="DM px-4 py-7 bg-shopiBlack text-white">
           <div className="text relative pl-5 flex flex-col items-start gap-5">
             <div className="borderSide80 h-4/5 w-[2px] bg-white absolute left-0 bottom-0"></div>
             <h1 className=' font-semibold text-lg'>Do Not Miss The Clothes In <br /> Different Styles</h1>
@@ -157,13 +157,13 @@ export default function Home() {
             <div className="forWomen bg-white/20 w-1/2 h-60 relative"><button className='absolute bottom-2 left-2 flex items-center gap-2 p-3 py-2 bg-shopiBlack text-white'>For Women <BsArrowRightShort className='text-2xl'/></button></div>
             <div className="forMen bg-white/20 w-1/2 h-60 relative"><button className='absolute bottom-2 left-2 flex items-center gap-2 p-3 py-2 bg-shopiBlack text-white'>For Men <BsArrowRightShort className='text-2xl'/></button></div>
           </div>
-        </div>
-        <section className="summerColl bg-white mb-5">
+        </section>
+        <section className="OS bg-white mb-5">
           <header className='p-5 pb-0 flex justify-between my-5'>
             <h1 className='font-bold'>On Sale Products</h1>
             <p className='flex items-center'>View More<BsArrowRightShort className='text-xl'/></p>
           </header>
-          <div className="slider my-10 flex  overflow-scroll">
+          <div className="slider my-10 mb-0 flex  overflow-scroll">
             <div className="scCard px-2 w-fit">
               <div className="image bg-shopiBlack/40 w-60 h-60 relative">
                 <div className="off bg-shopiBlack text-white p-3 absolute right-0 font-semibold">%15</div>
@@ -190,7 +190,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="summerColl bg-white mb-5">
+        <section className="POW bg-white mb-5">
           <header className='p-5 pb-0 flex justify-between my-5'>
             <h1 className='font-bold'>Product Of The Week</h1>
             <p className='flex items-center'>View More<BsArrowRightShort className='text-xl'/></p>
@@ -199,9 +199,9 @@ export default function Home() {
             <div className="image w-[40%] h-fill bg-white/40"></div>
             <div className="text w-[60%] flex flex-col gap-2 p-5">
               <h1 className='font-semibold'>Cotton Black T-Shirt</h1>
-              <p className=' text-sm'>Super light and comfortable cotton t-shirt without causing sensitivity to thee body</p>
+              <p className=' text-sm mb-4'>Super light and comfortable cotton t-shirt without causing sensitivity to thee body</p>
               <div className="price my-2 flex justify-between items-center">
-                <p>$125.98</p>
+                <p className='font-semibold'>$125.98</p>
                 <div className="stars flex">
                   <AiFillStar/>
                   <AiFillStar/>
@@ -214,7 +214,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="summerColl bg-white mb-5">
+        <section className="OHC bg-white mb-5">
           <header className='p-5 pb-0 flex justify-between my-5'>
             <h1 className='font-bold'>Our Happy Customers</h1>
             <p className='flex items-center'>View More<BsArrowRightShort className='text-xl'/></p>
