@@ -6,10 +6,12 @@ import glasses from '../public/images/glasses.jpg'
 import { Inter } from '@next/font/google'
 import styles from '../styles/Home.module.css'
 import {BsArrowRightShort} from 'react-icons/bs'
-import {AiFillStar} from 'react-icons/ai'
+import {AiFillStar,AiOutlineSearch,AiOutlineShoppingCart,AiOutlineUser} from 'react-icons/ai'
 import {TbWorld} from 'react-icons/tb'
 import {MdOutlineLocalShipping} from 'react-icons/md'
 import {BiLockAlt} from 'react-icons/bi'
+
+
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -25,91 +27,103 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="h-screen flex flex-col">
-        <nav className='p-4 flex w-full justify-between items-center'>
-          <div className="logo w-5 h-5 bg-black rounded-full">
-            
-          </div>
-          <div className="links hidden">
-            <ul>
-              <li>hello</li>
-              <li>hello</li>
-              <li>hello</li>
-            </ul>
-          </div>
-          <div className="hamburger flex flex-col gap-[.2rem] items-end">
-            <div className="line w-[.75rem] h-[.3rem] bg-black"></div>
-            <div className="line w-[1.5rem] h-[.3rem] bg-black"></div>
-            <div className="line w-[1.5rem] h-[.3rem] bg-black"></div>
-          </div>
-        </nav>
-        <header className='relative m-4 border-l-[3px] border-shopiBlack p-4'>
-          <h1 className=' font-semibold text-2xl'>
-          Different style and fashion <br /> for everyone
-          </h1>
-          <button className='bg-shopiBlack text-white py-3 px-5 text-lg mt-8 mb-20 flex items-center gap-2'>Shop Collection <BsArrowRightShort className='text-3xl'/></button>
-          <Image src={headerLady} className="md:absolute md:right-0 md:top-0 md:w-1/2 md:h-full hidden md:mt-10" alt=""/>
+      <main className="h-screen flex flex-col lg:max-h-screen lg:scrollbar lg:scrollbar-thumb-shopiBlack lg:scrollbar-track-gray-100">
+        <div className="top relative lg:flex lg:min-h-screen lg:flex-col ">
+          <nav className='p-4 flex w-full justify-between items-center lg:p-14'>
+            <div className="logo w-5 h-5 bg-black rounded-full">
+              
+            </div>
+            <div className="links hidden lg:block">
+              <ul className='flex gap-10 font-bold text-shopiBlack/80 text-xl'>
+                <li><button className='group relative py-2'><div className="transition origin-left under absolute w-full h-[3px] bg-shopiBlack/70 bottom-0 scale-x-0 group-hover:scale-x-100"></div>Home</button></li>
+                <li><button className='group relative py-2'><div className="transition origin-left under absolute w-full h-[3px] bg-shopiBlack/70 bottom-0 scale-x-0 group-hover:scale-x-100"></div>Collections</button></li>
+                <li><button className='group relative py-2'><div className="transition origin-left under absolute w-full h-[3px] bg-shopiBlack/70 bottom-0 scale-x-0 group-hover:scale-x-100"></div>Brands</button></li>
+                <li><button className='group relative py-2'><div className="transition origin-left under absolute w-full h-[3px] bg-shopiBlack/70 bottom-0 scale-x-0 group-hover:scale-x-100"></div>New</button></li>
+                <li><button className='group relative py-2'><div className="transition origin-left under absolute w-full h-[3px] bg-shopiBlack/70 bottom-0 scale-x-0 group-hover:scale-x-100"></div>Sales</button></li>
+              </ul>
+            </div>
+            <div className="sidenav text-3xl hidden lg:flex gap-5 ">
+              <AiOutlineSearch/>
+              <AiOutlineShoppingCart/>
+              <AiOutlineUser/>
+            </div>
+            <div className="hamburger flex flex-col gap-[.2rem] items-end lg:hidden">
+              <div className="line w-[.75rem] h-[.3rem] bg-black"></div>
+              <div className="line w-[1.5rem] h-[.3rem] bg-black"></div>
+              <div className="line w-[1.5rem] h-[.3rem] bg-black"></div>
+            </div>
+          </nav>
+          <header className='relative m-4 border-l-[3px] border-shopiBlack p-4 lg:p-14 lg:m-14 lg:flex lg:flex-col lg:gap-0 lg:grow lg:mb-0'>
+            <h1 className=' font-semibold text-2xl lg:text-7xl'>
+            Different style and fashion <br /> for everyone
+            </h1>
+            <p className='hidden lg:block lg:text-xl lg:font-semibold text-shopiBlack/70 lg:mt-10'>Create your own personal and special style among the <br /> new summer collection and be different from others.</p>
+            <button className='bg-shopiBlack text-white py-3 px-5 text-lg mt-8 mb-20 flex items-center gap-2 self-start z-10'>Shop Collection <BsArrowRightShort className='text-3xl'/></button>
+            <Image src={headerLady} className=" md:absolute md:right-0 md:top-0 md:w-1/2 md:h-screen hidden md:mt-10 lg:block lg:object-cover lg:-z-10 lg:object-top lg:-translate-y-20 lg:translate-x-14 lg:w-[50vw]" alt=""/>
 
-        </header>
-        <section className='m-4 ml-5 -mt-20 h-[35vmax] relative'>
-          <Image src={headerLady} className="ml-auto w-1/2 h-full object-cover md:opacity-0" alt=""/>
-          <div className="flex gap-3 w-fit pr-12 card absolute bottom-5  p-3 bg-white translate-x-8 shadow-xl">
-            <Image className='w-[4rem] aspect-square object-cover' src={glasses} alt=''/>
-            <div className="text flex flex-col justify-between">
-              <h1 className=' font-semibold'>Glasses</h1>
-              <p className='text-sm'>$2</p>
-              <div className="stars flex">
-                <AiFillStar />
-                <AiFillStar />
-                <AiFillStar />
-                <AiFillStar />
-                <AiFillStar />
+          </header>
+          <div className="floatyStuff lg:absolute lg:bottom-10 lg:w-full lg:overflow-hidden">
+            <section className='m-4 ml-5 -mt-20 h-[35vmax] relative lg:m-0 lg:left-1/3 lg:max-w-fill'>
+              <Image src={headerLady} className="ml-auto w-1/2 h-full object-cover lg:hidden" alt=""/>
+              <div className="flex gap-3 w-fit card absolute bottom-5  p-3 bg-white translate-x-8 shadow-xl lg:translate-x-24 lg:text-xl lg:pr-10">
+                <Image className='w-[4rem] aspect-square object-cover lg:w-[8rem]' src={glasses} alt=''/>
+                <div className="text flex flex-col justify-between lg:justify-center lg:gap-3">
+                  <h1 className=' font-semibold lg:font-bold lg:text-shopiBlack/70 '>Sudown Sunglasses</h1>
+                  <p className='text-sm lg:text-base lg:-mt-3 lg:font-bold lg:text-shopiBlack/70'>$ 24.80</p>
+                  <div className="stars flex lg:text-base">
+                    <AiFillStar />
+                    <AiFillStar />
+                    <AiFillStar />
+                    <AiFillStar />
+                    <AiFillStar />
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div className="flex gap-3 w-fit pr-12 card absolute bottom-5 -translate-y-[125%] p-3 bg-white shadow-xl">
-            <Image className='w-[4rem] aspect-square object-cover' src={glasses} alt=''/>
-            <div className="text flex flex-col justify-between">
-              <h1 className=' font-semibold'>Glasses</h1>
-              <p className='text-sm'>2$</p>
-              <div className="stars flex">
-                <AiFillStar />
-                <AiFillStar />
-                <AiFillStar />
-                <AiFillStar />
-                <AiFillStar />
+              <div className="flex gap-3 w-fit card absolute bottom-5 -translate-y-[125%] p-3 bg-white shadow-xl lg:text-xl lg:pr-10">
+                <Image className='w-[4rem] aspect-square object-cover lg:w-[8rem]' src={glasses} alt=''/>
+                <div className="text flex flex-col justify-between lg:justify-center lg:gap-3">
+                  <h1 className=' font-semibold lg:font-bold lg:text-shopiBlack/70 '>Sudown Sunglasses</h1>
+                  <p className='text-sm lg:text-base lg:-mt-3 lg:font-bold lg:text-shopiBlack/70'>$ 24.80</p>
+                  <div className="stars flex lg:text-base">
+                    <AiFillStar />
+                    <AiFillStar />
+                    <AiFillStar />
+                    <AiFillStar />
+                    <AiFillStar />
+                  </div>
+                </div>
               </div>
-            </div>
+            </section>
+            <section className='p-4 mb-4 flex social-proof lg:absolute lg:bottom-10 lg:left-24 lg:w-auto lg:gap-10'>
+              <div className="hc w-1/2 lg:w-auto">
+                <h1 className=' font-bold text-xl lg:text-2xl'>2K+</h1>
+                <p className='font-semibold lg:text-lg'>Happy Customers</p>
+              </div>
+              <div className="ib w-1/2 lg:w-auto">
+                <h1 className=' font-bold text-xl lg:text-2xl'>30+</h1>
+                <p className='font-semibold lg:text-lg'>International Brands</p>
+              </div>
+            </section>
           </div>
-        </section>
-        <section className='p-4 mb-4 flex social-proof'>
-          <div className="hc w-1/2">
-            <h1 className=' font-bold text-xl'>2K+</h1>
-            <p className='font-semibold'>Happy Customer</p>
-          </div>
-          <div className="ib w-1/2">
-            <h1 className=' font-bold text-xl'>30+</h1>
-            <p className='font-semibold'>International Brands</p>
-          </div>
-        </section>
-        <section className=' bg-shopiBlack px-10 py-5 text-white flex flex-col'>
-          <div className="desc text-center flex flex-col items-center my-4">
+        </div>
+        <section className=' bg-shopiBlack px-10 py-5 text-white flex flex-col lg:flex-row lg:justify-around lg:py-20'>
+          <div className="desc text-center flex flex-col items-center my-4 lg:flex-row lg:items-start lg:text-left lg:gap-5">
             <div className="logo text-4xl w-fit"><TbWorld/></div>
-            <div className="text">
+            <div className="text w-[10rem]">
               <h1 className="font-bold my-2">Worldwide Shop</h1>
               <p className=' text-[.8rem] text-white/70'>We dont limit our store buy from wherever you are.</p>
             </div>
           </div>
-          <div className="desc text-center flex flex-col items-center my-4">
+          <div className="desc text-center flex flex-col items-center my-4 lg:flex-row lg:items-start lg:text-left lg:gap-5">
             <div className="logo text-4xl w-fit"><MdOutlineLocalShipping/></div>
-            <div className="text">
+            <div className="text w-[10rem]">
               <h1 className="font-bold my-2">Free Shipping</h1>
               <p className=' text-[.8rem] text-white/70'>In all your purchases over $200 UDS.</p>
             </div>
           </div>
-          <div className="desc text-center flex flex-col items-center my-4">
+          <div className="desc text-center flex flex-col items-center my-4 lg:flex-row lg:items-start lg:text-left lg:gap-5">
             <div className="logo text-4xl w-fit"><BiLockAlt/></div>
-            <div className="text">
+            <div className="text w-[10rem]">
               <h1 className="font-bold my-2">Secure Payment</h1>
               <p className=' text-[.8rem] text-white/70'>Your data is protected and your Payments too.</p>
             </div>
@@ -125,7 +139,7 @@ export default function Home() {
               <div onClick={(e)=>{clickVal = 4; console.log(e.target)}} className={`04 cursor-pointer ${clickVal===4?"font-bold text-lg text-black":""} `}>04</div>
             </div>
           </header>
-          <div className="slider my-10 flex  overflow-scroll">
+          <div className="slider my-10 flex  overflow-x-scroll">
             <div className="scCard px-2 w-fit">
               <div className="image bg-shopiBlack/10 w-60 h-60 grid place-content-center">
                 <button className='text-white bg-shopiBlack p-4 flex items-center'>Quick View <BsArrowRightShort className='text-xl'/></button>
@@ -146,16 +160,16 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="DM px-4 py-7 bg-shopiBlack text-white">
-          <div className="text relative pl-5 flex flex-col items-start gap-5">
+        <section className="DM px-4 py-7 bg-shopiBlack text-white lg:flex lg:justify-between lg:px-10 lg:py-20">
+          <div className="text relative pl-5 flex flex-col items-start gap-5 lg:px-10 lg:gap-10">
             <div className="borderSide80 h-4/5 w-[2px] bg-white absolute left-0 bottom-0"></div>
-            <h1 className=' font-semibold text-lg'>Do Not Miss The Clothes In <br /> Different Styles</h1>
-            <p className=' capitalize'>See Attractive Men{"'"}s And Women{"'"}s clothes suitable for this season of the year in our most up-to-date and largest collection</p>
-            <button className='text-shopiBlack bg-white font-semibold p-4 py-2 flex items-center'>Discover More<BsArrowRightShort className='text-xl'/></button>
+            <h1 className=' font-semibold text-lg lg:text-2xl'>Do Not Miss The Clothes In <br /> Different Styles</h1>
+            <p className=' capitalize lg:max-w-lg'>See Attractive Men{"'"}<span className=' lowercase'>s</span> And Women{"'"}<span className=' lowercase'>s</span> clothes suitable for this season of the year in our most up-to-date and largest collection</p>
+            <button className='text-shopiBlack bg-white font-semibold p-4 py-2 flex items-center lg:text-lg gap-3 align-middle	'>Discover More<BsArrowRightShort className='text-xl lg:text-3xl'/></button>
           </div>
-          <div className="images mt-10 flex gap-5">
-            <div className="forWomen bg-white/20 w-1/2 h-60 relative"><button className='absolute bottom-2 left-2 flex items-center gap-2 p-3 py-2 bg-shopiBlack text-white'>For Women <BsArrowRightShort className='text-2xl'/></button></div>
-            <div className="forMen bg-white/20 w-1/2 h-60 relative"><button className='absolute bottom-2 left-2 flex items-center gap-2 p-3 py-2 bg-shopiBlack text-white'>For Men <BsArrowRightShort className='text-2xl'/></button></div>
+          <div className="images mt-10 flex gap-5 lg:w-3/5">
+            <div className="forWomen bg-white/20 w-1/2 h-60 relative lg:h-96"><button className='absolute bottom-2 left-2 flex items-center gap-2 p-3 py-2 bg-shopiBlack text-white'>For Women <BsArrowRightShort className='text-2xl'/></button></div>
+            <div className="forMen bg-white/20 w-1/2 h-60 relative lg:-mt-10 lg:h-96"><button className='absolute bottom-2 left-2 flex items-center gap-2 p-3 py-2 bg-shopiBlack text-white'>For Men <BsArrowRightShort className='text-2xl'/></button></div>
           </div>
         </section>
         <section className="OS bg-white mb-5">
@@ -163,7 +177,7 @@ export default function Home() {
             <h1 className='font-bold'>On Sale Products</h1>
             <p className='flex items-center'>View More<BsArrowRightShort className='text-xl'/></p>
           </header>
-          <div className="slider my-10 mb-0 flex  overflow-scroll">
+          <div className="slider my-10 mb-0 flex  overflow-x-scroll">
             <div className="scCard px-2 w-fit">
               <div className="image bg-shopiBlack/40 w-60 h-60 relative">
                 <div className="off bg-shopiBlack text-white p-3 absolute right-0 font-semibold">%15</div>
